@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人简历</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+    <style>
+        /* 定义颜色变量 */
+        :root {
+            --primary-color: #007BFF;
+            --secondary-color: #6C757D;
+            --background-color: #F8F9FA;
+            --card-background: #FFFFFF;
+        }
+
+        body {
+            background-color: var(--background-color);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+        }
+
+       .resume-container {
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            background-color: var(--card-background);
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+       .card {
+            background-color: var(--card-background);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
+            transition: transform 0.3s ease;
+        }
+
+       .card:hover {
+            transform: translateY(-5px);
+        }
+
+       .card-header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px 20px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+       .card-body {
+            padding: 20px;
+        }
+
+       .photo-cell img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+        }
+
+        th {
+            color: var(--secondary-color);
+        }
+
+        /* 图标样式 */
+        th i {
+            margin-right: 8px;
+            color: var(--primary-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="resume-container">
+        <h1>个人简历</h1>
+
+        <div class="card">
+            <div class="card-header">基本信息</div>
+            <div class="card-body">
+                <table>
+                    <tr>
+                        <th><i class="fa-solid fa-user"></i>姓名</th>
+                        <td>索京奥</td>
+                        <th><i class="fa-solid fa-venus-mars"></i>性别</th>
+                        <td>男</td>
+                        <th><i class="fa-solid fa-cake-candles"></i>年龄</th>
+                        <td>19</td>
+                        <td rowspan="3" class="photo-cell">
+                            <img src="58bb620b69560d47907df83884d3c1f.png" alt="个人照片">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><i class="fa-solid fa-location-dot"></i>籍贯</th>
+                        <td>山东泰安</td>
+                        <th><i class="fa-solid fa-phone"></i>联系电话</th>
+                        <td>188-6560-6605</td>
+                        <th><i class="fa-solid fa-envelope"></i>电子邮箱</th>
+                        <td>xiaosuoxiao04@qq.com</td>
+                    </tr>
+                    <tr>
+                        <th><i class="fa-solid fa-graduation-cap"></i>学历</th>
+                        <td>本科</td>
+                        <th><i class="fa-solid fa-heart-pulse"></i>健康状况</th>
+                        <td>良好</td>
+                        <th><i class="fa-solid fa-ring"></i>婚姻状况</th>
+                        <td>未婚</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">求职意向</div>
+            <div class="card-body">
+                <table>
+                    <tr>
+                        <th>求职意向</th>
+                        <td>软件开发工程师</td>
+                        <th>专业</th>
+                        <td>软件工程</td>
+                    </tr>
+                    <tr>
+                        <th>毕业院校</th>
+                        <td colspan="3">鲁东</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">技能证书</div>
+            <div class="card-body">
+                <ul>
+                    <li>英语六级(CET-6)</li>
+                    <li>全国计算机等级考试四级</li>
+                    <li>Java程序员认证</li>
+                    <li>Python数据分析师认证</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">个人特长与爱好</div>
+            <div class="card-body">
+                <ul>
+                    <li>编程：熟练掌握Java、Python等编程语言</li>
+                    <li>运动：羽毛球、游泳</li>
+                    <li>游戏：黑暗之魂</li>
+                    <li>阅读：科技、历史类书籍</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">项目经历</div>
+            <div class="card-body">
+                <table>
+                    <tr>
+                        <th>项目名称</th>
+                        <th>时间</th>
+                        <th>项目描述</th>
+                    </tr>
+                    <tr>
+                        <td>电商平台开发</td>
+                        <td>2025.03 - 2028.06</td>
+                        <td>基于Spring Boot框架开发的B2C电商平台，负责后端API设计和数据库优化</td>
+                    </tr>
+                    <tr>
+                        <td>数据分析系统</td>
+                        <td>2025.07 - 2026.12</td>
+                        <td>使用Python和Pandas库开发的数据分析工具，实现了销售数据的可视化分析</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">自我评价</div>
+            <div class="card-body">
+                <p>本人性格开朗，积极向上，具有良好的团队合作精神和沟通能力。在校期间系统学习了计算机专业知识，具备扎实的编程基础和较强的学习能力。参与过多个项目开发，积累了丰富的实践经验。</p>
+                <p>工作认真负责，能够承受一定的工作压力，善于分析和解决问题。对新知识和技术保持持续学习的态度，希望能在贵公司发挥我的专业能力，与公司共同成长。</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+    
