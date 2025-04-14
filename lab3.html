@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>综合展示网站</title>
+    <style>
+        /* 导航样式 */
+        .nav-container {
+            background-color: #333;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .nav-menu {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .nav-menu li {
+            margin: 0 20px;
+        }
+        
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 15px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        
+        .nav-menu a:hover {
+            background-color: #4CAF50;
+        }
+        
+        /* 页面容器样式 */
+        .page-container {
+            display: none;
+            padding: 20px;
+        }
+        
+        .active-page {
+            display: block;
+        }
+        
+        /* 分隔线样式 */
+        .separator {
+            height: 50px;
+            background-color: #f5f5f5;
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航菜单 -->
+    <div class="nav-container">
+        <ul class="nav-menu">
+            <li><a href="#" onclick="showPage('page1')">知识点视图</a></li>
+            <li><a href="#" onclick="showPage('page2')">新闻资讯</a></li>
+        </ul>
+    </div>
+
+    <!-- 页面1 - 知识点视图 -->
+    <div id="page1" class="page-container active-page">
+        <!-- 原始代码1 -->
+        <div style="font-family: Arial, sans-serif; background-color: #f5f5f5; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0;">
+            <div style="position: relative; width: 600px; height: 400px;">
+                <div style="position: relative; width: 200px; height: 200px; background-color: #4CAF50; border-radius: 50%; margin: 100px auto; display: flex; justify-content: center; align-items: center; color: white; font-size: 24px; box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); z-index: 1;">
+                    HTML5 CSS3
+                </div>
+                
+                <div style="position: absolute; width: 180px; background-color: white; border-radius: 8px; padding: 15px; box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); top: -50px; left: -150px; z-index: 2;">
+                    <h3 style="margin-top: 0; color: #4CAF50; border-bottom: 1px solid #eee; padding-bottom: 10px;">HTML基础和HTML5</h3>
+                    <ul style="padding-left: 20px;">
+                        <li style="margin-bottom: 8px; color: #555;">HTML标签与属性</li>
+                        <li style="margin-bottom: 8px; color: #555;">HTML5多媒体(视频和音频)</li>
+                        <li style="margin-bottom: 8px; color: #555;">HTML5图像标签(画布和SVG)</li>
+                        <li style="margin-bottom: 8px; color: #555;">HTML5地理定位</li>
+                        <li style="margin-bottom: 8px; color: #555;">HTML5表单</li>
+                    </ul>
+                </div>
+                
+                <div style="position: absolute; width: 180px; background-color: white; border-radius: 8px; padding: 15px; box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); top: -100px; right: -150px; z-index: 2;">
+                    <h3 style="margin-top: 0; color: #4CAF50; border-bottom: 1px solid #eee; padding-bottom: 10px;">CSS基础和CSS3</h3>
+                    <ul style="padding-left: 20px;">
+                        <li style="margin-bottom: 8px; color: #555;">CSS选择器</li>
+                        <li style="margin-bottom: 8px; color: #555;">CSS样式</li>
+                        <li style="margin-bottom: 8px; color: #555;">CSS盒模型与定位</li>
+                        <li style="margin-bottom: 8px; color: #555;">CSS3的2D与3D转换</li>
+                        <li style="margin-bottom: 8px; color: #555;">CSS3的过渡与动画</li>
+                        <li style="margin-bottom: 8px; color: #555;">CSS3新的边框效果</li>
+                    </ul>
+                </div>
+                
+                <div style="position: absolute; width: 180px; background-color: white; border-radius: 8px; padding: 15px; box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); bottom: -200px; left: 210px; z-index: 2;">
+                    <h3 style="margin-top: 0; color: #4CAF50; border-bottom: 1px solid #eee; padding-bottom: 10px;">JavaScript</h3>
+                    <ul style="padding-left: 20px;">
+                        <li style="margin-bottom: 8px; color: #555;">数据类型</li>
+                        <li style="margin-bottom: 8px; color: #555;">运算符</li>
+                        <li style="margin-bottom: 8px; color: #555;">基础语法</li>
+                        <li style="margin-bottom: 8px; color: #555;">BOM对象</li>
+                        <li style="margin-bottom: 8px; color: #555;">DOM对象</li>
+                        <li style="margin-bottom: 8px; color: #555;">JS特效</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 页面2 - 新闻资讯 -->
+    <div id="page2" class="page-container">
+        <!-- 原始代码2 -->
+        <div style="font-family: 'Microsoft YaHei', sans-serif; margin: 0; padding: 0; background-color: #f9f9f9; color: #333;">
+            <div style="width: 1000px; margin: 20px auto; background-color: white; padding: 20px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+                <h1 style="text-align: center; color: #d32f2f; margin-bottom: 20px;">新闻资讯</h1>
+                <hr style="border: none; height: 2px; background-color: #eee; margin-bottom: 30px;">
+                
+                <div style="display: flex;">
+                    <div style="width: 70%; padding-right: 30px; border-right: 1px solid #eee;">
+                        <div style="margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px dashed #ddd;">
+                            <h4 style="color: #1976D2; margin-top: 0; margin-bottom: 15px; font-size: 18px;">科技创新引领未来发展新趋势</h4>
+                            <div style="display: flex; gap: 15px; margin-bottom: 15px;">
+                                <img src="科技创新与未来发展.png" alt="新闻图片1" style="width: 48%; height: auto; border-radius: 4px;">
+                                <img src="2.png" alt="新闻图片2" style="width: 48%; height: auto; border-radius: 4px;">
+                            </div>
+                            <div style="font-size: 14px; color: #777;">
+                                作者：索京奥 | 发布时间：2023-06-15 | 阅读量：1024
+                            </div>
+                        </div>
+                        
+                        <div style="margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px dashed #ddd;">
+                            <h4 style="color: #1976D2; margin-top: 0; margin-bottom: 15px; font-size: 18px;">全球气候变化会议达成重要协议</h4>
+                            <div style="display: flex; gap: 15px; margin-bottom: 15px;">
+                                <img src="天气.png" alt="新闻图片1" style="width: 48%; height: auto; border-radius: 4px;">
+                                <img src="天气2.png" alt="新闻图片2" style="width: 48%; height: auto; border-radius: 4px;">
+                            </div>
+                            <div style="font-size: 14px; color: #777;">
+                                作者：秦士淞 | 发布时间：2023-06-14 | 阅读量：876
+                            </div>
+                        </div>
+                        
+                        <div style="margin-bottom: 30px; padding-bottom: 20px;">
+                            <h4 style="color: #1976D2; margin-top: 0; margin-bottom: 15px; font-size: 18px;">城市更新项目改善居民生活质量</h4>
+                            <div style="display: flex; gap: 15px; margin-bottom: 15px;">
+                                <img src="民生.png" alt="新闻图片1" style="width: 48%; height: auto; border-radius: 4px;">
+                                <img src="民生2.png" alt="新闻图片2" style="width: 48%; height: auto; border-radius: 4px;">
+                            </div>
+                            <div style="font-size: 14px; color: #777;">
+                                作者：林佳祺 | 发布时间：2023-06-13 | 阅读量：756
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="width: 30%; padding-left: 30px;">
+                        <h4 style="color: #333; border-left: 4px solid #d32f2f; padding-left: 10px; margin-top: 0;">相关热文推荐</h4>
+                        
+                        <div style="margin-bottom: 25px;">
+                            <a href="#" style="display: block; color: #d32f2f; text-decoration: none; font-weight: bold; margin-bottom: 10px;">人工智能技术在各行业的应用前景分析</a>
+                            <img src="人工智能.png" alt="热文图片" style="width: 100%; height: auto; border-radius: 4px;">
+                        </div>
+                        
+                        <div style="margin-bottom: 25px;">
+                            <a href="#" style="display: block; color: #d32f2f; text-decoration: none; font-weight: bold; margin-bottom: 10px;">最新研究发现：健康饮食可延长寿命</a>
+                            <img src="健康.png" alt="热文图片" style="width: 100%; height: auto; border-radius: 4px;">
+                        </div>
+                        
+                        <div style="margin-bottom: 25px;">
+                            <a href="#" style="display: block; color: #d32f2f; text-decoration: none; font-weight: bold; margin-bottom: 10px;">旅游市场复苏，这些目的地最受欢迎</a>
+                            <img src="旅游.png" alt="热文图片" style="width: 100%; height: auto; border-radius: 4px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showPage(pageId) {
+            // 隐藏所有页面
+            document.querySelectorAll('.page-container').forEach(page => {
+                page.classList.remove('active-page');
+            });
+            
+            // 显示选中的页面
+            document.getElementById(pageId).classList.add('active-page');
+            
+            // 滚动到顶部
+            window.scrollTo(0, 0);
+            
+            return false; // 阻止默认链接行为
+        }
+    </script>
+</body>
+</html>
